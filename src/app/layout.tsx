@@ -18,7 +18,10 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://lifestatspro.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: "Age Calculator & Life Statistics Clock | Days Alive Counter & Birthday Tracker",
   description:
     "Free Age Calculator and Life Statistics Clock! Calculate your exact age down to the second, track total heartbeats, sleeping years, days alive counter, planetary ages, 5-year weekend birthday tracker, and download your custom Life Story Card!",
@@ -40,6 +43,7 @@ export const metadata: Metadata = {
     title: "Age Calculator & Life Statistics Clock | Days Alive Counter",
     description:
       "Calculate your exact age, total heartbeats, days alive, planet ages, and 5-year weekend birthday tracker. Generate your downloadable Life Story Card!",
+    url: baseUrl,
     type: "website",
     locale: "en_US",
     siteName: "LifeStats PRO",
